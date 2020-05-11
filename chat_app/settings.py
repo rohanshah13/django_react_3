@@ -136,7 +136,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 REACT_APP = os.path.join(BASE_DIR, 'frontend') 
 STATICFILES_DIRS = [
-    os.path.join(REACT_APP, 'build', 'static'),
+    os.path.join(REACT_APP, 'builda', 'static'),
 ]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

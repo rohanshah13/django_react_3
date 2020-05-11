@@ -20,7 +20,7 @@ class ReactAppView(View):
 	def get(self, request):
 		try:
 
-			with open(os.path.join(settings.REACT_APP, 'build', 'index.html')) as file:
+			with open(os.path.join(settings.REACT_APP, 'builda', 'index.html')) as file:
 				return HttpResponse(file.read())
 
 		except :
