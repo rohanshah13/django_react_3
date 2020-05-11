@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'cg#p$g+j9tax!#a3cup@1$8obt2_+&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [ 'guarded-bayou-10058.herokuapp.com']
+ALLOWED_HOSTS = [ 'guarded-bayou-10058.herokuapp.com','127.0.0.1']
 
 os.environ["DJANGO_ALLOW_ASYNC_UNSAFE"] = "true"
 # Application definition
@@ -140,3 +140,7 @@ STATICFILES_DIRS = [
 ]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
